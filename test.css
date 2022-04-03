@@ -1,0 +1,164 @@
+.container{
+    height: 36rem;
+    width: clamp(25rem,50%,600px);
+    border: 1px solid #bbb;
+    margin:auto;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-60%);
+  }
+  
+  .book{
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    position:absolute;
+    filter:drop-shadow(10px 40px 5px rgba(0,0,0,.25));
+    top:15%;
+    left:50%;
+    transform: translateX(-80%) scale(1);
+    perspective: 1650px;
+    perspective-origin: center 50%;
+  }
+  .bookBinding{
+    height: 100%;
+    width:2rem;
+    position:absolute;
+    display: flex;
+    top:0%;
+    left:calc(50% + 2rem);
+    transform: rotateY(200deg);
+    background-color: rgb(83, 82, 82);
+  }
+  
+  .pages{
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    transform-style: preserve-3d;
+  }
+  .page{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    transform-style: preserve-3d;
+    transform-origin: 100% 100%;
+    box-shadow: 0px 0px 0px 2px rgb(92, 88, 88);
+  }
+  
+  .pageOne{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width:100%;
+    // background-color: #bbb;
+    transform-style: preserve-3d;
+    transform: rotateY(.5turn);
+    box-shadow: -1px 0px 0px 10px rgb(255, 255, 255),
+                -1px 0px 0px 12px rgb(185, 185, 185);
+                background-image: linear-gradient(
+                  45deg,
+                  rgb(240, 240, 255) 00% 20%,
+                  rgb(255, 255, 255) 30% 40%,
+                  rgb(240, 240, 255) 60% 90%,
+                  white 90% 100%
+                );
+    
+    
+  }
+  
+  .pageTwo{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width:100%;
+    // background-color: #bbb;
+    transform-style: preserve-3d;
+    transform: translateZ(1px);
+    background-image: linear-gradient(
+      -45deg,
+      rgb(241, 239, 255) 00% 20%,
+      white 30% 40%,
+      rgb(234, 234, 251) 60% 90%,
+      white 90% 100%
+    );
+  }
+  
+  .pageNo{
+    position:absolute;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+  }
+  .nextPageBtn{
+    position: absolute;
+    top:0;
+    right:0;
+  }
+  
+  
+  
+  /* page one */
+  .page:nth-child(1){
+    transform:rotateY(8deg);
+  }
+  .page:nth-child(1) > :nth-child(1){
+    // background-color: rgb(156, 156, 156);
+  }
+  .page:nth-child(1) > :nth-child(2){
+    // background-color: rgb(138, 138, 138);
+    background-image: linear-gradient(
+      45deg,
+      rgb(221, 221, 253) 00% 20%,
+      rgb(219, 220, 246) 30% 40%,
+      rgb(237, 237, 250) 60% 90%,
+      white 90% 100%
+    );
+  }
+  /* //////////// */
+  
+  
+  
+  /* page two */
+  .page:nth-child(2){
+    transform:rotateY(8deg);
+  }
+  .page:nth-child(2) > :nth-child(1){
+    // background-color: rgb(56, 33, 33);
+  }
+  .page:nth-child(2) > :nth-child(2){
+    // background-color: rgb(68, 35, 35);
+  }
+  
+  /* //////////////////// */
+  
+  
+  
+  /* page three */
+  .page:nth-child(3){
+    transform:rotateY(165deg);
+  }
+  .page:nth-child(3) > :nth-child(1){
+    // background-color: rgb(13, 66, 82);
+  }
+  .page:nth-child(3) > :nth-child(2){
+    // background-color: rgb(13, 66, 82);
+  }
+  /* //////////////////// */
+  
+  /* page four */
+  .page:nth-child(4){
+    transform:rotateY(166deg);
+  }
+  .page:nth-child(4) > :nth-child(1){
+    // background-color: rgb(40, 8, 61);
+  }
+  .page:nth-child(4) > :nth-child(2){
+    // background-color: rgb(40, 8, 61);
+  }
+  /* //////////////////// */
